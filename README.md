@@ -41,7 +41,7 @@ Things you may want to cover:
 |name|string|null: false, unique: true|
 ### Association
 - has_many :users_groups
-- has_many :user,  through:users_groups
+- has_many :users, through:users_groups
 - has_many :posts
 
 ## postsテーブル
