@@ -1,0 +1,26 @@
+.main_chat
+  .main_chat__top
+    .main_chat__top__left
+      .main_chat__top__left__middle
+        %p.name test
+        %p.name_bottom Member : masa
+    .main_chat__top__right
+      .main_chat__top__right__middle
+        = link_to "#", class:"name" do
+          %p.name Edit
+  .main_chat__middle
+    .main_chat__middle__text1
+      %p.name_top masa 
+      %p.name_date1 2019/11/20(wed) 17:43:01
+    %p.name_middle おはよう！
+    .main_chat__middle__text2
+      %p.name_bottom masa 
+      %p.name_date2 2019/11/20(wed) 17:43:34
+  .main_chat__bottom
+    %form.main_chat__bottom__form
+      .input-box
+        %input{type: "text", class: "input-box__message", placeholder: "type a message"}
+          %label{class: "input-box__message__btn"}
+            %i.fas.fa-image.input-box__message__btn-img
+            %input{type: "file", class: "input-box__message__btn__file"}
+    %input.main_chat__bottom__send{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send",}
