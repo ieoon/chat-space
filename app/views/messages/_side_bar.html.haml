@@ -2,11 +2,11 @@
   .side_bar__top
     .side_bar__top__sidebox
       .side_bar__top__sidebox__username
-        %p.name name
+        = current_user.name
       .side_bar__top__sidebox__icons
         = link_to "#", class:"fas" do
           %i.fas.fa-edit
-        = link_to "#", class:"fas" do
+        = link_to edit_user_path(current_user), class:"fas" do
           %i.fas.fa-cog        
   .side_bar__bottom
     .side_bar__bottom__groups
