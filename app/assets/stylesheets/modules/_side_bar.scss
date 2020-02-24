@@ -43,11 +43,11 @@
       padding: 20px 20px 40px 20px;
       font-weight: bold;
       color: $side_color;
-      .name_top{
+      &__name_top{
         font-size: 15px;
         margin-bottom: 5px;
       }
-      .name_bottom{
+      &__name_bottom{
         font-size: 11px;
       }
     }

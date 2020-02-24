@@ -4,11 +4,14 @@
       .side_bar__top__sidebox__username
         = current_user.name
       .side_bar__top__sidebox__icons
-        = link_to "#", class:"fas" do
+        = link_to new_group_path, class:"fas" do
           %i.fas.fa-edit
         = link_to edit_user_path(current_user), class:"fas" do
           %i.fas.fa-cog        
   .side_bar__bottom
-    .side_bar__bottom__groups
-      %p.name_top techcamp
-      %p.name_bottom まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side_bar__bottom__groups
+        = link_to '#' do
+          .side_bar__bottom__groups__name_top 
+            = group.name
+          .side_bar__bottom__groups__name_bottom まだメッセージがありません
