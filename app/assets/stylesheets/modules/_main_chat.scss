@@ -44,65 +44,47 @@
     background-color: #fafafa;
     padding-top: 35px;
     padding-left: 40px;
-    &__text1{
-      display: flex;
-      margin-bottom: 12px;
-      .name_top{
-      color: #333333;
-      font-size: 16px;
-      margin-right: 10px;
+    overflow: scroll;
+    .message{
+      .upper-message{
+        &__user-name{
+          color: #333333;
+          font-size: 16px;
+          margin-right: 10px;
+          }
+        &__date{
+          color: #999999;
+          font-size: 12px; 
+          }
       }
-      .name_date1{
-      color: #999999;
-      font-size: 12px; 
-      }
-    }
-    .name_middle{
-    color: #434A54;
-    font-size: 12px;
-    margin-bottom: 46px;
-    }
-    &__text2{
-      display: flex;
-      .name_bottom{
-        color: 16px;
-        font-size: 16px;
-        margin-right: 10px;
-      }
-      .name_date2{
-        color: #999999;
-        font-size: 12px;
-      }
+    .lower-message{
     }
   }
+    
+  }
   &__bottom{
-    display: flex;
     height: 90px;
-    width: 100%;
+    padding: 20px 40px;
     background-color: #d2d2d2;
-    align-items: center;
     &__form{
       display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin-left: 40px;
       .input-box{
-        height: 50px;
         width: 100%;
-        display: flex;
+        position: relative;
         &__message{
           height: 50px;
           width: 100%;
+          // position: relative;
           color: #434A54;
           border-style: none;
           padding: 0 0px 0 10px;
           &__btn{
             text-decoration: none;
-            position: relative;
-            display: flex;
+            position: absolute;
             align-items: center;
+            right: 10px;
+            line-height: 50px;
             &-img{
-              position: absolute;
               right: 10px;
             }
             &__file{
@@ -110,7 +92,6 @@
             }
           }
         }
-        
       }
     }
     &__send{
