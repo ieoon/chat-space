@@ -2,25 +2,29 @@
   .main_chat__top
     .main_chat__top__left
       .main_chat__top__left__middle
-        %p.name test
-        %p.name_bottom Member : masa
+        = @group.name
+        %p.name_bottom 
+          Member : 
+          - @group.users.each do |user|
+            = user.name
+
     .main_chat__top__right
       .main_chat__top__right__middle
-        = link_to "#", class:"name" do
+        = link_to edit_group_path(@group), class:"name" do
           %p.name Edit
+
   .main_chat__middle
-    .main_chat__middle__text1
-      %p.name_top masa 
-      %p.name_date1 2019/11/20(wed) 17:43:01
-    %p.name_middle おはよう！
-    .main_chat__middle__text2
-      %p.name_bottom masa 
-      %p.name_date2 2019/11/20(wed) 17:43:34
-  .main_chat__bottom
-    %form.main_chat__bottom__form
-      .input-box
-        %input{type: "text", class: "input-box__message", placeholder: "type a message"}
-          %label{class: "input-box__message__btn"}
+    .messages
+      = render @messages
+  = form_for [@group, @message] do |f|
+    .main_chat__bottom
+      .main_chat__bottom__form
+        .input-box
+          = f.text_field :content, class: 'input-box__message', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__message__btn' do
             %i.fas.fa-image.input-box__message__btn-img
-            %input{type: "file", class: "input-box__message__btn__file"}
-    %input.main_chat__bottom__send{data:{disable_with: "send"}, name: "commit", type: "submit", value: "Send",}
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'main_chat__bottom__send'
+
+
+         

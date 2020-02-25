@@ -39,6 +39,7 @@
   &__bottom{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    overflow: scroll;
     &__groups{
       padding: 20px 20px 40px 20px;
       font-weight: bold;
