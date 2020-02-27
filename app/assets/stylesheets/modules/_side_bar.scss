@@ -43,12 +43,13 @@
     &__groups{
       padding: 20px 20px 40px 20px;
       font-weight: bold;
-      color: $side_color;
       &__name_top{
+        color: $side_color;
         font-size: 15px;
         margin-bottom: 5px;
       }
       &__name_bottom{
+        color: $side_color;
         font-size: 11px;
       }
     }
