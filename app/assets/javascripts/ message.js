@@ -64,9 +64,6 @@ $(function(){
     .fail(function() {
       alert("メッセージ送信に失敗しました");
     });
-    // always(function(){
-    //   alert("メッセージ送信に失敗しました")
-    // });
   });
 
   var reloadMessages = function() {
