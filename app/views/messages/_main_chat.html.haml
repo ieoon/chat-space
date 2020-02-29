@@ -14,8 +14,8 @@
           %p.name Edit
 
   .main_chat__middle
-    .messages
-      = render @messages
+    = render @messages
+    
   = form_for [@group, @message] do |f|
     .main_chat__bottom
       .main_chat__bottom__form
