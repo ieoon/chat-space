@@ -9,7 +9,6 @@
     &__sidebox{
       height: 20px;
       width: 260px;
-      background-color: #333333;
       margin-left: 20px;
       display: flex;
       justify-content: space-between;
@@ -41,6 +40,9 @@
     background-color: #2f3e51;
     overflow: scroll;
     &__groups{
+      a{
+        text-decoration: none;
+      }
       padding: 20px 20px 40px 20px;
       font-weight: bold;
       &__name_top{
